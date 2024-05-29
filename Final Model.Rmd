@@ -1,0 +1,27 @@
+---
+title: "Barcelona Real Estate Final Model"
+author: "Ryan Kim"
+date: '2023-08-23'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r cars}
+#Final Model
+B <- read_excel("/Users/yujunkim/Desktop/BarcelonaRE_Data.xlsx", sheet = 2)
+
+lm1<-lm(formula = sqrt(price) ~ factor(`City Zone`) * Type  + factor(`City Zone`)+
+    Rooms *`m^2` + Bathrooms/Rooms + Bathrooms +Rooms * Kitchen + `"Atico"`/`m^2` + 
+    Terrasse/`m^2` + Parking/`m^2`, data = train_data)
+
+#predictions <- predict(lm1, newdata = Price)
+
+#squared_errors <- ((predictions^2 - (test_data$price))^2)
+
+#avg_squared_error <- mean(squared_errors)
+#sqrt(avg_squared_error)
+```
