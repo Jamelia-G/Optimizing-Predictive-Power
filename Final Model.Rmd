@@ -1,6 +1,6 @@
 ---
 title: "Barcelona Real Estate Final Model"
-author: "Ryan Kim"
+author: "Jamelia Gordon and Ryan Kim"
 date: '2023-08-23'
 output: html_document
 ---
@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r cars}
 #Final Model
-B <- read_excel("/Users/yujunkim/Desktop/BarcelonaRE_Data.xlsx", sheet = 2)
+B <- read_excel("file.choose()", sheet = 2)
 
 lm1<-lm(formula = sqrt(price) ~ factor(`City Zone`) * Type  + factor(`City Zone`)+
     Rooms *`m^2` + Bathrooms/Rooms + Bathrooms +Rooms * Kitchen + `"Atico"`/`m^2` + 
